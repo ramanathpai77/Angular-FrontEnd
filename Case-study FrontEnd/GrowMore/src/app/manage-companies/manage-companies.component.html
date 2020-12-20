@@ -1,0 +1,25 @@
+<p>manage-companies works!</p>
+<h1>Company List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Company Name</th>
+            <th>CEO</th>
+            <th>Turnover</th>
+            <th>List In stock market</th>
+            <th>Board of directories</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of Company">
+            <td>{{c.cCode}}</td>
+            <td>{{c.cName}}</td>
+            <td>{{c.ceo}}</td>
+            <td>{{c.turnover}}</td>
+            <td>{{c.lInSE}}</td>
+            <td>{{c.boD}}</td>
+        </tr>
+    </tbody>
+</table>

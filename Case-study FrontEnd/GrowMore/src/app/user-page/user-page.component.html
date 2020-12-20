@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-nav" *ngIf="token.getIsAuthenticated() else login">
+     
+      <a class="nav-item nav-link" routerLink="/manage-company"> Company List</a>
+      <a class="nav-item nav-link" routerLink="/manage-ipo">  IPO List</a>
+      <a class="nav-item nav-link" routerLink="/manage-se">Stock Exchanges</a>
+      <a class="nav-item nav-link" routerLink="/filter-sec">Filter By Sectors</a>
+      <a class="nav-item nav-link" routerLink="/filter-se">Filter by Stock Exchanges</a>
+      <a class="nav-item nav-link" href="#" (click)="logout();" > Logout</a>
+    </div>
+  
+    <ng-template #login>
+      <div class="navbar-nav">
+          <a class="nav-item nav-link" routerLink="/login"> Login</a>
+      </div>
+    </ng-template>
+</nav>
+

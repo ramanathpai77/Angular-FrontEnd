@@ -1,0 +1,28 @@
+<h1>Enter Your details</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label>Enter Your Name</label>
+                    <input class="form-control" id="userName" name="userName" [(ngModel)]="obj.userName"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter Password</label>
+                    <input class="form-control" id="password" name="password" [(ngModel)]="obj.password"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter Email</label>
+                    <input class="form-control" id="email" name="email" [(ngModel)]="obj.email"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter  PhoneNumber</label>
+                    <input  class="form-control" id="phoneNumber" name="phoneNumber" [(ngModel)]="obj.phoneNumber"/>
+                </div>
+                <div class="form-group">
+                   <button type="submit" class="btn btn-primary" (click)="save();">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

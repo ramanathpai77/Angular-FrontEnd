@@ -1,0 +1,41 @@
+<h1>Add IPO</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label>Enter IPO ID</label>
+                    <input class="form-control" id="id" name="id" [(ngModel)]="obj.id"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter IPO Name</label>
+                    <input class="form-control" id="cName" name="cName" [(ngModel)]="obj.cName"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter Stock Exchange</label>
+                    <input class="form-control" id="sE" name="sE" [(ngModel)]="obj.sE"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter  Price Per Share</label>
+                    <input type="number" class="form-control" id="pricePerShare" name="pricePerShare" [(ngModel)]="obj.pricePerShare"/>
+                </div>
+                <div class="form-group">
+                    <label>Total Number of Shares</label>
+                    <input type="number" class="form-control" id="totalNoShares" name="totalNoShares" [(ngModel)]="obj.totalNoShares"/>
+                </div>
+                <div class="form-group">
+                    <label>OpenDate</label>
+                    <input type="datetime" class="form-control" id="openDate" name="openDate" [(ngModel)]="obj.openDate"/>
+                </div>
+                <div class="form-group">
+                    <label>Remarks</label>
+                    <input class="form-control" id="remarks" name="remarks" [(ngModel)]="obj.remarks"/>
+                </div>
+
+                <div class="form-group">
+                   <button type="submit" class="btn btn-primary" (click)="save();">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

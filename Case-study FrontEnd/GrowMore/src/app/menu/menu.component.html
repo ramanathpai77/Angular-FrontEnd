@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="navbar-nav" *ngIf="token.getIsAuthenticated() else login">
+  <div class="navbar-nav" *ngIf="token.getUserType()=='admin' else user">
+    <a class="nav-item nav-link" routerLink="/excel-upload">Excel Upload</a>
+    <a class="nav-item nav-link" routerLink="/manage-company">Manage Company</a>
+    <a class="nav-item nav-link" routerLink="/manage-ipo"> Manage IPO</a>
+    <a class="nav-item nav-link" routerLink="/manage-se"> Manage Stock Exchanges</a>
+    <a class="nav-item nav-link" routerLink="/create-company"> Add Company</a>
+    <a class="nav-item nav-link" routerLink="/create-ipo"> Add IPO</a>
+    <a class="nav-item nav-link" routerLink="/create-se"> Add StockExchanges</a>
+    <a class="nav-item nav-link" href="#" (click)="logout();" > Logout</a>
+  </div>
+</div>
+  <ng-template #login>
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/login"> Login</a>
+        
+    </div>
+</ng-template>
+<ng-template #user>
+  
+     <app-user-page></app-user-page>
+ 
+</ng-template>
+  </nav>

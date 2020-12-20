@@ -1,0 +1,29 @@
+<p>add-stockexchange works!</p>
+<h1>Add Stock Exchange</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                
+                <div class="form-group">
+                    <label>Enter Stock Exchange Name</label>
+                    <input class="form-control" id="seName" name="seName" [(ngModel)]="obj.seName"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter Remarks</label>
+                    <input class="form-control" id="Remarks" name="Remarks" [(ngModel)]="obj.Remarks"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter  Address</label>
+                    <input  class="form-control" id="Address" name="Address" [(ngModel)]="obj.Address"/>
+                </div>
+
+                <div class="form-group">
+                   <button type="submit" class="btn btn-primary" (click)="save();">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

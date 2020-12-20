@@ -1,0 +1,59 @@
+
+<h1>Add Company</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <div class="form-group">
+                    <label>Enter Company Code</label>
+                    <input class="form-control" id="ccode" name="ccode" [(ngModel)]="obj.ccode"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter Company name</label>
+                    <input class="form-control" id="cname" name="cname" [(ngModel)]="obj.cname"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter  Company Turnover</label>
+                    <input type="number" class="form-control" id="Turnover" name="Turnover" [(ngModel)]="obj.Turnover"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter Company CEO</label>
+                    <input class="form-control" id="CEO" name="CEO" [(ngModel)]="obj.CEO"/>
+                </div>
+                <div class="form-group">
+                    <label>Enter Board of Directories</label>
+                    <input class="form-control" id="BoD" name="BoD" [(ngModel)]="obj.BoD"/>
+                </div>
+                <div class="form-group">
+                    <label>is Listed in Stock Exchange?</label>
+                    <input class="form-control" id="LInSE" name="LInSE" [(ngModel)]="obj.LInSE"/>
+                </div>
+                <div class="form-group" >
+                    <label for="sectors">Which Sector?</label><br>
+                    <select class="form-control" name="s" [(ngModel)]="obj.SectorId"  >
+                        <option *ngFor= "let s of sector" value= {{s.sectorId}}  >
+                           {{s.sectorName}}
+                        </option>
+                      </select>
+
+                    
+                </div>
+                <div class="form-group">
+                    <label>Description about the Company</label>
+                    <input class="form-control" id="Description" name="Description" [(ngModel)]="obj.Description"/>
+                </div>
+                <div class="form-group">
+                    <label for="se">Which Stock Exchange?</label>
+                    <select class="form-control" name="s" [(ngModel)]="obj.SEId">
+                        <option *ngFor="let s of se" value= {{s.seId}}  name="s.seId" >
+                           {{s.seName}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                   <button type="submit" class="btn btn-primary" (click)="save();">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

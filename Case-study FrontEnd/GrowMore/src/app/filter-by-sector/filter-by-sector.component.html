@@ -1,0 +1,41 @@
+
+<div class="container">
+    <div class="form-group" >
+        <label for="sectors" >Select one Sector!</label><br>
+        <select class="form-control" name="s"  [(ngModel)]="selectedSector"  >
+            <option *ngFor= "let s of sector" value= {{s.sectorName}}>
+               {{s.sectorName}}
+            </option>
+          </select>
+          <div class="form-group"><br>
+            <button type="submit" class="btn btn-primary" (click)="save();">Search</button>
+         </div>
+        
+    </div>
+</div>
+<div class="container" *ngIf="comp!=0">
+    <div *ngIf="!hide">
+        <h1>Company List</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                  
+                    <th>Company Name</th>
+                   
+                    <th>Turnover</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of comp">
+                   
+                    <td>{{c.cName}}</td>
+                    
+                    <td>{{c.turnover}}</td>
+                 
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

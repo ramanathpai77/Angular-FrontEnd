@@ -1,0 +1,28 @@
+
+<h1>IPO List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Company Name</th>
+            <th>Stock Exchange</th>
+            <th>TotalNoShares</th>
+            <th>PricePerShare</th>
+            <th>OpenDate</th>
+            <th>Remarks</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of IPO">
+            <td>{{i.id}}</td>
+            <td>{{i.cName}}</td>
+            <td>{{i.se}}</td>
+            <td>{{i.pricePerShare}}</td>
+            <td>{{i.totalNoShares}}</td>
+            <td>{{i.openDate}}</td>
+            <td>{{i.remarks}}</td>
+        </tr>
+    </tbody>
+</table>
+

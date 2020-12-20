@@ -1,0 +1,21 @@
+<p>manage-stock-exchanges works!</p>
+<h1>Stock Exchange List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Stock Exchange Id</th>
+            <th>Stock Exchange Name</th>
+            <th>Remarks</th>
+            <th>Address</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of SE">
+            <td>{{s.seId}}</td>
+            <td>{{s.seName}}</td>
+            <td>{{s.remarks}}</td>
+            <td>{{s.address}}</td>
+        </tr>
+    </tbody>
+</table>
