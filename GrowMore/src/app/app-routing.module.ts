@@ -16,6 +16,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { FilterBySectorComponent } from './filter-by-sector/filter-by-sector.component';
 import { FilterBySEComponent } from './filter-by-se/filter-by-se.component';
+import { ComparisonChartsComponent } from './comparison-charts/comparison-charts.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,8 @@ const routes: Routes = [
   {component : UserPageComponent, path:'user-url', canActivate: [OnlyAuthenticatedUserGuard]},
   {component : FilterBySectorComponent, path:'filter-sec', canActivate: [OnlyAuthenticatedUserGuard]},
   {component : FilterBySEComponent, path:'filter-se', canActivate: [OnlyAuthenticatedUserGuard]},
+  {component : ComparisonChartsComponent, path:'compare-comp', canActivate: [OnlyAuthenticatedUserGuard]},
+
 
 ];
 

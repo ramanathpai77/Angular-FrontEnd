@@ -25,6 +25,8 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { FilterBySectorComponent } from './filter-by-sector/filter-by-sector.component';
 import { FilterBySEComponent } from './filter-by-se/filter-by-se.component';
+import { CompanyChartComponent } from './company-chart/company-chart.component';
+import { ChartsModule } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,13 +46,15 @@ import { FilterBySEComponent } from './filter-by-se/filter-by-se.component';
     AdminPageComponent,
     FilterBySectorComponent,
     FilterBySEComponent,
+    CompanyChartComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
     
   ],
   providers: [CompanyServiceService,

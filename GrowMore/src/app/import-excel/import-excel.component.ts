@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as XL from 'xlsx';
 
 @Component({
   selector: 'app-import-excel',
@@ -6,13 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./import-excel.component.css']
 })
 export class ImportExcelComponent implements OnInit {
-
+  data: any;
   constructor() { }
 
   ngOnInit(): void {
   }
-  fileSelected($event) {}
-  upload() {
-   
+
+    upload() {
+     alert("Inserted")
+    }
   }
-}
+  
+   
+  
+

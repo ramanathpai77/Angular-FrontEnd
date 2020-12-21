@@ -53,4 +53,8 @@ getse(){
   return this.http.get(this.urls.seEndpoint, { headers: this.header }); 
 
 }
+getstockprice(id){
+  return this.http.get(`${this.urls.StockEndpoint}/${id}`, { headers: this.header }); 
+
+}
 }
